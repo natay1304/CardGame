@@ -16,7 +16,7 @@ public class Card
     public Card()
     {       
         cardName = (CardNames)Random.Range(0, 6);
-        cardDescription = (Description)Random.Range(0, 3);
+        cardDescription = (Description)Random.Range(0, 2);
         title = cardName.ToString();
         description = cardDescription.ToString();
         hp = GetValue();

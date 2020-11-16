@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using System;
 using UnityEngine.UI;
 
-public class TouchControl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class TouchControl : MonoBehaviour, IDragHandler, IEndDragHandler
 {
 
     private LayoutGroup _element;
@@ -19,11 +19,6 @@ public class TouchControl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
-    {   
-                   
-    }
-
     public void OnDrag(PointerEventData eventData)
     {        
         _card.transform.position += (Vector3)eventData.delta / Screen.height * 1000;
@@ -32,8 +27,8 @@ public class TouchControl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     public void OnEndDrag(PointerEventData eventData)
     {
         var drag = GetDrag(eventData);
-        if (drag.magnitude < Screen.width/10)
-            _card.transform.position = _startPoint;
+        //if (drag.magnitude < Screen.width/10)
+           // _card.transform.position = _startPoint;
     }
 
     private static Vector2 GetDrag(PointerEventData eventData)

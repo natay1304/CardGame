@@ -20,7 +20,6 @@ public class LoadCardImage : MonoBehaviour
 
         yield return loader;
 
-        Debug.Log("loaded");
         Texture2D texture = new Texture2D(140, 130);
         loader.LoadImageIntoTexture(texture);
         _image.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.one / 2);

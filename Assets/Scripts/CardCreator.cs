@@ -5,17 +5,13 @@ using UnityEngine;
 public class CardCreator : MonoBehaviour
 {
     public CardView card;
+    public List<CardView> cards = new List<CardView>();
 
     void Start()
     {
         for (int i = 0; i < 6; i++)
         {
-            GameObject.Instantiate(card, transform);
+            cards.Add(GameObject.Instantiate(card, transform));
         }
-    }
-
-    void Update()
-    {
-        
     }
 }

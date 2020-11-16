@@ -23,8 +23,6 @@ public class CardPresentor
 
     private void PropertyChangedHandler(CardProperty property, int value)
     {
-        Debug.Log("value " + value);
-        Debug.Log("property " + property.ToString());
         switch (property)
         {
             case CardProperty.Attack:
